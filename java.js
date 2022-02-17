@@ -37,18 +37,43 @@ function Reset() {
     tableauScore.roundp2 = 0;
     tableauScore.globalp1 = 0;
     tableauScore.globalp2 = 0;
+    dicenumber = 0;
     return tableauScore;
 
 }
 
 /* End Reset */ 
 
-/* Hold */
-/* End Hold */
-
 /* Roll Dice */
-/* End Roll Dice */
 
+let dicenumber = 0;
+
+const ButtonRollDice = document.getElementById('ButtonRollDice');
+ButtonRollDice.addEventListener('Click', Roll(1,6));
+
+function Roll(min, max) {
+
+    dicenumber = min + Math.floor(Math.random() * ( max - min +1));
+    console.log(dicenumber);
+    return;
+}
+/*
+function ChangeDice() {
+
+    let ImageDice = document.getElementById("Dice");
+    let DiceAttribute = ImageDice.getAttribute("src");
+
+}
+ End Roll Dice */
+
+/* Hold */
+
+const ButtonHold = document.getElementById('ButtonHold');
+ButtonHold.addEventListener('click', Hold);
+
+function Hold(){}
+
+/* End Hold */
 
 /* Score */
 
@@ -61,7 +86,7 @@ function FunctionScore() {
     document.getElementById("score_p1_affichage")
     .innerText = (tableauScore.globalp1 ) + '';
     document.getElementById("score_p2_affichage")
-    .innerText = (tableauScore.globalp2 ) + '';
+    .innerText = (dicenumber ) + '';
     document.getElementById("current_p1_affichage")
     .innerText = (tableauScore.roundp1 ) + '';
     document.getElementById("current_p2_affichage")
