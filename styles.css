@@ -22,3 +22,88 @@ body{
     height: available;
     Background-color: green;
 }
+
+
+/* Player 1 */ 
+
+.Player1 .Name_score_p1{
+
+    margin : 10% 30% 0% 25%;
+    
+}
+
+.Player1 .Name_score_p1 strong{
+
+    font-size: 50px;
+    
+}
+
+.Player1 .Name_score_p1 .Score_p1{
+
+    font-size: 50px;
+    margin : 2% 25% 0% 25%;
+}
+
+.Player1 .Current_p1{
+
+    width: 150px;
+    font-size: 20px;
+    border: 2px solid green;
+    margin : 40% 25% 40% 30%;
+    
+}
+.Player1 .Current_p1 span{
+
+    margin : 0% 25% 0% 25%;
+
+}
+
+.Player1 .Current_p1 .Current_score_p1{
+
+    font-size: 10px;
+    margin : 0% 25% 0% 30%;
+}
+
+/* Player 2 */ 
+
+.Player2 .Name_score_p2{
+
+    margin : 10% 30% 0% 25%;
+    
+}
+
+.Player2 .Name_score_p2 strong{
+
+    font-size: 50px;
+    
+}
+
+.Player2 .Name_score_p2 .Score_p2{
+
+    font-size: 50px;
+    margin : 2% 25% 0% 25%;
+}
+
+.Player2 .Current_p2{
+
+    width: 150px;
+    font-size: 20px;
+    border: 2px solid red;
+    margin : 40% 25% 40% 30%;
+    
+}
+.Player2 .Current_p2 span{
+
+    margin : 0% 25% 0% 25%;
+
+}
+
+.Player2 .Current_p2 .Current_score_p2{
+
+    font-size: 10px;
+    margin : 0% 25% 0% 30%;
+}
+
+/* Central */ 
+
+
