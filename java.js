@@ -19,12 +19,44 @@ bouton hold = envoyer du resultat de round sur le global
 */
 
 let tableauScore = {
+player: 1,
 roundp1: 54,
 roundp2: 0,
 globalp1: 0,
 globalp2: 10,
 dicenumber: 0,
 };
+
+/* Player / Hold */ 
+
+const ButtonHold = document.getElementById('ButtonHold');
+ButtonHold.addEventListener('click', HoldChangePlayer);
+
+function HoldChangePlayer () {
+
+    if ( tableauScore.player == 1 ) 
+        tableauScore.globalp1 += tableauScore.roundp1;
+
+    else if ( tableauScore.player == 1 && tableauScore.globalp1 > 100 )
+       Win /* rajouter ecran de win */
+
+    else
+        tableauScore.roundp1 = 0;
+        tableauScore.player = 2; 
+
+    if ( tableauScore.player == 2 ) 
+        tableauScore.globalp2 += tableauScore.roundp2;
+
+    else if ( tableauScore.player == 2 && tableauScore.globalp1 > 100 )
+        Win /* rajouter ecran de win */
+ 
+    else
+         tableauScore.roundp2 = 0;
+         tableauScore.player = 1; 
+
+}
+
+/* End Player / Hold */
 
 /* Reset */
 
@@ -48,7 +80,7 @@ function Reset() {
 /* Roll Dice */
 
 const ButtonRollDice = document.getElementById('ButtonRollDice');
-ButtonRollDice.addEventListener('Click', Roll(1,6));
+ButtonRollDice.addEventListener('click', Roll(1,6));
 ButtonRollDice.addEventListener('click', ChangeDice);
 
 function Roll(min, max) {
@@ -63,30 +95,37 @@ function Roll(min, max) {
 function ChangeDice() {
 
     if ( tableauScore.dicenumber == 1 ) 
-    { DiceAttribute = "D1.png" }
-    else if  ( tableauScore.dicenumber == 2 )
-    { DiceAttribute = "D2.png" }
-    else if  ( tableauScore.dicenumber == 3 )
-    { DiceAttribute = "D3.png" }
-    else if  ( tableauScore.dicenumber == 4 )
-    { DiceAttribute = "D4.png" }
-    else if  ( tableauScore.dicenumber == 5 )
-    { DiceAttribute = "D5.png" }
-    else    
-    { DiceAttribute = "D6.png" }
-    return;
+        DiceAttribute = "images/D1.png"
+        else if  ( tableauScore.dicenumber == 2 )
+            DiceAttribute = "images/D2.png"
+        else if  ( tableauScore.dicenumber == 3 )
+            DiceAttribute = "images/D3.png"
+        else if  ( tableauScore.dicenumber == 4 )
+            DiceAttribute = "images/D4.png"
+        else if  ( tableauScore.dicenumber == 5 )
+            DiceAttribute = "images/D5.png"
+        else
+            DiceAttribute = "images/D6.png"
 
-}
+    if ( tableauScore.dicenumber == 1 && tableauScore.player == 1 )
+        tableauScore.roundp1 = 0;
+        tableauScore.player = 2;
+
+    if ( tableauScore.dicenumber == 1 && tableauScore.player == 2 )
+        tableauScore.roundp2 = 0;
+        tableauScore.player = 1;
+
+    return tableauScore;
+
+}    
+    
 /* End Roll Dice */
 
-/* Hold */
+/* Round */ 
 
-const ButtonHold = document.getElementById('ButtonHold');
-ButtonHold.addEventListener('click', Hold);
 
-function Hold(){}
 
-/* End Hold */
+/* End Round */
 
 /* Score */
 
@@ -97,12 +136,12 @@ DisplayScore.addEventListener("click", FunctionScore);
 function FunctionScore() { 
 
     document.getElementById("score_p1_affichage")
-    .innerText = (tableauScore.globalp1 ) + '';
+    .innerText = (tableauScore.globalp1) + '';
     document.getElementById("score_p2_affichage")
-    .innerText = (tableauScore.dicenumber ) + '';
+    .innerText = (tableauScore.dicenumber) + '';
     document.getElementById("current_p1_affichage")
-    .innerText = (tableauScore.roundp1 ) + '';
+    .innerText = (tableauScore.roundp1) + '';
     document.getElementById("current_p2_affichage")
-    .innerText = (tableauScore.roundp2 ) + '';
+    .innerText = (tableauScore.roundp2) + '';
 }
 /* End Score */
