@@ -109,7 +109,7 @@ function ChangeDice() {
             document.getElementById("Dice").src="images/D6.jpg";
         }
 
-         return DiceAttribute;
+         return;
 
 }
 function Dice1() {
@@ -152,11 +152,14 @@ function Round() {
 
 /* End Round */
 
+
+
 /* Score */
 
 const DisplayScore = document.body;
 
 DisplayScore.addEventListener("click", FunctionScore);
+DisplayScore.addEventListener("click", Win);
 
 function FunctionScore() { 
 
@@ -170,3 +173,20 @@ function FunctionScore() {
     .innerText = (tableauScore.roundp2) + '';
 }
 /* End Score */
+
+/* Win */ 
+
+function Win() {
+
+    if ( tableauScore.globalp1 >= 100 )
+    document.getElementById("Player1")
+    .innerText = 'Win';
+    document.getElementById("Player2")
+    .innerText = 'Loose'
+
+
+
+
+}
+
+/* End Win */
