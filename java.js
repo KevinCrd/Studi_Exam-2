@@ -34,13 +34,15 @@ ButtonHold.addEventListener('click', HoldChangePlayer);
 
 function HoldChangePlayer () {
 
-    if ( tableauScore.player == 1 ) {
+    if ( tableauScore.player == 1 && tableauScore.roundp1 != 0 ) {
         tableauScore.globalp1 += tableauScore.roundp1;
         tableauScore.roundp1 = 0;
+        tableauScore.player = 2;
     }
-    else if ( tableauScore.player == 2 ) {
+    else if ( tableauScore.player == 2 && tableauScore.roundp2 != 0 ) {
         tableauScore.globalp2 += tableauScore.roundp2; 
         tableauScore.roundp2 = 0;
+        tableauScore.player = 1;
     }
 
     return tableauScore;
@@ -85,28 +87,26 @@ function Roll() {
     return tableauScore.dicenumber;
 }
 
-    const ImageDice = document.getElementById("Dice");
-    let DiceAttribute = ImageDice.getAttribute("src");
 
 function ChangeDice() {
 
     if ( tableauScore.dicenumber == 1 ) {
-        DiceAttribute = "images/D1.jpg" 
+        document.getElementById("Dice").src="images/D1.jpg";
     }
         else if  ( tableauScore.dicenumber == 2 ) {
-            DiceAttribute = "images/D2.jpg" 
+            document.getElementById("Dice").src="images/D2.jpg";
         }
         else if  ( tableauScore.dicenumber == 3 ) {
-            DiceAttribute = "images/D3.jpg" 
+            document.getElementById("Dice").src="images/D3.jpg";
         }
         else if  ( tableauScore.dicenumber == 4 ) {
-            DiceAttribute = "images/D4.jpg" 
+            document.getElementById("Dice").src="images/D4.jpg";
         }
         else if  ( tableauScore.dicenumber == 5 ) {
-            DiceAttribute = "images/D5.jpg" 
+            document.getElementById("Dice").src="images/D5.jpg";
         }
         else if ( tableauScore.dicenumber == 6 ) {
-            DiceAttribute = "images/D6.jpg" 
+            document.getElementById("Dice").src="images/D6.jpg";
         }
 
          return DiceAttribute;
