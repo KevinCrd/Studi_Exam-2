@@ -4,8 +4,6 @@
     src: url(https://fonts.google.com/specimen/Lato);
 }
 
-
-
 body{
   display: flex;
   flex-direction: row;
@@ -16,6 +14,7 @@ body{
 .Player1{
     width: 40%;
     height: available;
+    background-color: #f4f4f4;
 }
 
 .Central{
@@ -26,6 +25,7 @@ body{
 .Player2{
     width: 40%;
     height: available;
+    background-color: #f4f4f4;
 }
 
 
@@ -122,14 +122,13 @@ body{
 a{
 
     text-decoration: none;
+    color: black;
 
 }
 .NewGame{
 
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top : 2%;
+    margin : 2% auto 0 auto; 
     font-size: 25px;
 
 }
@@ -137,18 +136,14 @@ a{
 .Dice {
 
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top : 20%;
+    margin : 20% auto 0 auto;
 
 }
 
 .Rolldice {
 
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top : 60%;
+    margin: 60% auto 0 auto; 
     font-size: 25px;
 
 }
@@ -156,9 +151,7 @@ a{
 .Hold {
 
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
+    margin: 5% auto 0 auto;
     font-size: 25px;
 
 }
