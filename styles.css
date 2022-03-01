@@ -8,102 +8,126 @@ body{
 .Player1{
     width: 33%;
     height: available;
-    background-color: red;
 }
 
 .Central{
-    width: 33%;
+    width: 34%;
     height: available;
-    Background-color: blue;
 }
 
 .Player2{
     width: 33%;
     height: available;
-    Background-color: green;
 }
 
 
 /* Player 1 */ 
 
-.Player1 .Name_score_p1{
+.Name_score_p1{
 
-    margin : 10% 30% 0% 25%;
-    
+    text-align: center;
+
 }
 
-.Player1 .Name_score_p1 strong{
+.Name_score_p1 strong{
 
     font-size: 50px;
     
 }
 
-.Player1 .Name_score_p1 .Score_p1{
+.Score_p1{
 
     font-size: 50px;
-    margin : 2% 25% 0% 25%;
+    text-align: center;
 }
 
-.Player1 .Current_p1{
+.Current_p1{
 
     width: 150px;
-    font-size: 20px;
-    border: 2px solid green;
-    margin : 40% 25% 40% 30%;
+    font-size: 35px;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     
 }
-.Player1 .Current_p1 span{
 
-    margin : 0% 25% 0% 25%;
+.Current_score_p1{
 
-}
-
-.Player1 .Current_p1 .Current_score_p1{
-
-    font-size: 10px;
-    margin : 0% 25% 0% 30%;
+    font-size: 25px;
+    margin: 5px 0 5px 0;
+    text-align: center;
 }
 
 /* Player 2 */ 
 
-.Player2 .Name_score_p2{
+.Name_score_p2{
 
-    margin : 10% 30% 0% 25%;
-    
+    text-align: center;
+
 }
 
-.Player2 .Name_score_p2 strong{
+.Name_score_p2 strong{
 
     font-size: 50px;
     
 }
 
-.Player2 .Name_score_p2 .Score_p2{
+.Score_p2{
 
     font-size: 50px;
-    margin : 2% 25% 0% 25%;
+    text-align: center;
 }
 
-.Player2 .Current_p2{
+.Current_p2{
 
     width: 150px;
-    font-size: 20px;
-    border: 2px solid red;
-    margin : 40% 25% 40% 30%;
+    font-size: 35px;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     
 }
-.Player2 .Current_p2 span{
 
-    margin : 0% 25% 0% 25%;
+.Current_score_p2{
 
-}
-
-.Player2 .Current_p2 .Current_score_p2{
-
-    font-size: 10px;
-    margin : 0% 25% 0% 30%;
+    font-size: 25px;
+    margin: 5px 0 5px 0;
+    text-align: center;
 }
 
 /* Central */ 
 
+.NewGame{
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.Dice {
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.Rolldice {
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.Hold {
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 

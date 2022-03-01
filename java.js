@@ -152,8 +152,6 @@ function Round() {
 
 /* End Round */
 
-
-
 /* Score */
 
 const DisplayScore = document.body;
@@ -178,15 +176,18 @@ function FunctionScore() {
 
 function Win() {
 
-    if ( tableauScore.globalp1 >= 100 )
+    if ( tableauScore.globalp1 >= 100 || tableauScore.globalp1 == 100){
     document.getElementById("Player1")
-    .innerText = 'Win';
+    .innerText = 'Winner';
     document.getElementById("Player2")
-    .innerText = 'Loose'
-
-
-
-
+    .innerText = 'Loser' 
+    }
+    else if ( tableauScore.globalp2 >= 100 || tableauScore.globalp2 == 100 ){
+    document.getElementById("Player2")
+    .innerText = 'Winner';
+    document.getElementById("Player1")
+    .innerText = 'Loser'
+    }
 }
 
 /* End Win */
