@@ -56,6 +56,7 @@ function HoldChangePlayer () {
 const ButtonNewGame = document.getElementById('ButtonNewGame');
 
 ButtonNewGame.addEventListener('click', Reset);
+ButtonNewGame.addEventListener('click', ResetName)
 
 function Reset() {
 
@@ -67,6 +68,14 @@ function Reset() {
     tableauScore.player = 1;
     return tableauScore;
 
+}
+
+function ResetName() {
+
+    document.getElementById("Player1")
+    .innerText = 'Player 1';
+    document.getElementById("Player2")
+    .innerText = 'Player 2' 
 }
 
 /* End Reset */ 
@@ -158,7 +167,7 @@ const DisplayScore = document.body;
 
 DisplayScore.addEventListener("click", FunctionScore);
 DisplayScore.addEventListener("click", Win);
-DisplayScore.addEventListener("click", ChangeBackground);
+DisplayScore.addEventListener("click", ChangeStyle);
 
 function FunctionScore() { 
 
@@ -197,16 +206,17 @@ function Win() {
 
 /* Change Style */
 
-function ChangeBackground() {
+function ChangeStyle() {
+
 
 if ( tableauScore.player == 1 ){
-        document.getElementByClassName(Player1).style.backgroundColor = 'gray';
-        document.getElementbyClassName(Player2).style.backgroundColor = 'white';
+        document.getElementById("IconP2").style.display = "none";
+        document.getElementById("IconP1").style.display = "inline";
         }
 
         else if ( tableauScore.player == 2 ) {
-            document.getElementByClassName(Player2).style.backgroundColor = 'gray';
-            document.getElementbyClassName(Player).style.backgroundColor = 'white';
+            document.getElementById("IconP1").style.display = "none";
+            document.getElementById("IconP2").style.display = "inline";
         } 
 }
 /* End Change Style */
