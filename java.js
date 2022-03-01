@@ -158,6 +158,7 @@ const DisplayScore = document.body;
 
 DisplayScore.addEventListener("click", FunctionScore);
 DisplayScore.addEventListener("click", Win);
+DisplayScore.addEventListener("click", ChangeBackground);
 
 function FunctionScore() { 
 
@@ -169,6 +170,8 @@ function FunctionScore() {
     .innerText = (tableauScore.roundp1) + '';
     document.getElementById("current_p2_affichage")
     .innerText = (tableauScore.roundp2) + '';
+
+
 }
 /* End Score */
 
@@ -191,3 +194,21 @@ function Win() {
 }
 
 /* End Win */
+
+/* Change Style */
+
+function ChangeBackground() {
+
+if ( tableauScore.player == 1 ){
+        document.getElementByClassName(Player1).style.backgroundColor = 'gray';
+        document.getElementbyClassName(Player2).style.backgroundColor = 'white';
+        }
+
+        else if ( tableauScore.player == 2 ) {
+            document.getElementByClassName(Player2).style.backgroundColor = 'gray';
+            document.getElementbyClassName(Player).style.backgroundColor = 'white';
+        } 
+}
+/* End Change Style */
+
+
