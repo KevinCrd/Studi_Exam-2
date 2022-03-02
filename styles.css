@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'Lato';
     font-style: normal;
-    src: url(https://fonts.google.com/specimen/Lato);
+    src: url(Lato-Light.ttf);
+    src: url(Lato-Regular.ttf);
 }
 
 body{
@@ -9,6 +10,7 @@ body{
   flex-direction: row;
   width: 99%;
   height: auto;
+  font-family: 'Lato';
 }
 
 .Player1{
